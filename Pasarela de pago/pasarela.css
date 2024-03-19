@@ -1,0 +1,134 @@
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #000000; /* Manteniendo el fondo negro */
+  color: #c992e0; /* Texto en color original */
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.05); /* Ligeramente transparente para un efecto sutil */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(201, 146, 224, 0.5); /* Sombra suave en color de la marca */
+}
+
+.logo {
+  color: #762d7e; /* Un tono de púrpura medio para 'Morgana' */
+  font-size: 2rem; /* Tamaño del logotipo */
+}
+
+.logo span {
+  color: #fff; /* Color blanco para 'Store' */
+}
+h2 {
+  color: #c992e0; /* Color de la marca para títulos */
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra para dar profundidad al texto */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #c992e0; /* Texto en color de la marca */
+}
+
+input[type="email"],
+input[type="text"],
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 2px solid #c992e0; /* Borde en color de la marca */
+  border-radius: 5px;
+  background-color: #ffffff; /* Fondo cambiado a blanco */
+  color: #000000; /* Texto en negro para contraste */
+  transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: #ffffff; /* Resaltar con blanco al enfocar */
+}
+
+.notification-options,
+.delivery-options,
+.additional-options {
+  margin-bottom: 20px;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-buttons button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #c992e0; /* Botones en color de la marca */
+  color: #000000; /* Texto en negro para contraste */
+  transition: background-color 0.3s, transform 0.2s; /* Transición para color y efecto de presión */
+}
+
+.action-buttons button:hover {
+  background-color: #d6a8e5; /* Color más claro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+.total {
+  margin-top: 20px;
+}
+
+.total input[type="text"] {
+  font-weight: bold;
+  background-color: #ffffff; /* Fondo cambiado a blanco */
+  color: #000000; /* Texto en negro para contraste */
+}
+
+/* Mejoras adicionales para selectores y checkboxes */
+select,
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #c992e0;
+  border: 1px solid #c992e0;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #000000;
+  border: 1px solid #c992e0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%23000000"><path d="M13.485 1.929a.75.75 0 0 1 1.061 1.06L6.56 11.975a.75.75 0 0 1-1.121.02L1.464 8.02a.75.75 0 1 1 1.061-1.06l3.475 3.475 6.485-6.506z"/></svg>');
+}
+
+/* Estilo para mejorar la visibilidad del focus */
+input[type="email"]:focus,
+input[type="text"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  outline: none;
+  border-color: #ffffff;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Virtual</title>
+  <link href="https://fonts.cdnfonts.com/css/new-gothic-style" rel="stylesheet">
+  
+  <link rel="stylesheet" href="loader.css">
+  <link rel="stylesheet" href="style.css">
+ 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="loader"></div>
+  </div>
+  <header>
+    <nav>
+      <a href="#header" class="logo">Morgana <span>Store</span></a>
+      <div class="nav-links">
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#promociones">Ofertas</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#">Contacto</a>
+      </div>
+      <div class="right-nav">
+        <a href="#" class="icon-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="icon-link"><i class="fa-regular fa-user"></i>
+          </div></a>
+        <a href="#" class="icon-link" id="icon-cart"> <p id="count"></p>
+          <i class="fa-solid fa-cart-arrow-down" data-amount="0"></i>
+        </a>
+      </div>
+    </nav>
+    
+  </header>
+  <div class="container">
+    <div id="root"></div>
+    <div class="sidebar">
+        <div class="head"><p>Carrito de compras</p></div>
+        <div id="cartItem">Tu carrito está vacío</div>
+        <div class="foot">
+          <h3>Total</h3>
+          <h2 id="total">$ 0.00</h2>
+        </div>
+        <!-- Caja de texto para el código promocional -->
+        <div class="promotional-code">
+          <input type="text" placeholder="Código promocional">
+          <button>Aplicar</button>
+        </div>
+        <button class="btn-pagar" >Pagar</button>
+
+
+    </div>
+  </div>
+</div>
+
+
+<script src="loader.js"></script>
+<script src="cartshop.js"></script>
+</body>
+</html>

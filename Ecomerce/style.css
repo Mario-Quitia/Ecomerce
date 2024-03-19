@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gothic A1', sans-serif; /* O una tipografía de tu elección */
+  background-color: #000000; /* Un tono de púrpura oscuro de la paleta como fondo general */
+  color: #c992e0; /* Un tono de púrpura claro de la paleta para el texto general */
+}
+
+header {
+  background-color: #1c0a29; /* Un tono ligeramente más oscuro para el header */
+  padding: 1rem 0; /* Espaciado superior e inferior para el header */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%; /* Espaciado lateral para el nav */
+}
+
+.logo {
+  color: #762d7e; /* Un tono de púrpura medio para 'Morgana' */
+  font-size: 2rem; /* Tamaño del logotipo */
+}
+
+.logo span {
+  color: #fff; /* Color blanco para 'Store' */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #762d7e; /* Color de resaltado para los enlaces al pasar el ratón */
+}
+
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.icon-link {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.icon-link:hover {
+  color: #762d7e;
+}
+
+#icon-cart {
+  display: flex;
+  position: relative;
+}
+
+#icon-cart i {
+  font-size: 1.5rem;
+  display: block;
+}
+
+#count {
+  background-color: #762d7e;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2em 0.4em;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.75rem;
+  min-width: 1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.container {
+  display: flex; /* Usa flexbox para un mejor control del layout */
+  justify-content: space-between; /* Separa los elementos hijos */
+  padding: 20px; /* Agrega algo de espacio alrededor */
+  max-width: 1200px; /* Establece un ancho máximo para el contenedor */
+  margin: auto; /* Centra el contenedor */
+}
+
+#root {
+  display: flex; /* Cambia a flex para alinear elementos horizontalmente */
+  flex-direction: row; /* Alinea los elementos de forma horizontal */
+  justify-content: space-around; /* Espacia los elementos uniformemente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+  gap: 20px; /* Espacio entre productos */
+}
+
+.sidebar {
+  width: 25%; /* Ajusta según necesites */
+  padding: 20px; /* Espacio interior */
+  margin-left: 20px; /* Espacio desde el contenedor de productos */
+  background-color: #200f33; /* Un tono más neutro para el sidebar */
+  color: #fff; /* Texto claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra más marcada para efecto de profundidad */
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Centra verticalmente los elementos */
+  margin: 20px 0px;
+  padding: 10px 0px;
+  border-top: 1px solid #280d36; /* Borde superior en un tono de púrpura oscuro */
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #762d7e; /* Borde en un tono de púrpura medio */
+}
+
+.img-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bottom {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #c992e0; /* Título en un tono de púrpura claro */
+}
+
+button {
+  width: 100%;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  background-color: #762d7e; /* Botón en un tono de púrpura medio */
+  padding: 7px 25px;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  background-color: #280d36; /* Color de fondo del botón al pasar el ratón */
+}
+
+.row-img {
+  width: 80px; /* Asegura que el contenedor ocupe el ancho disponible */
+  display: flex; /* Usa flexbox para alinear elementos internos */
+  justify-content: center; /* Centra horizontalmente la imagen dentro del contenedor */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que desborde el contenedor */
+}
+
+.rowimg {
+  max-width: 100%; /* Limita el ancho de la imagen al 100% de su contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener las proporciones */
+  object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin cortarse */
+}
+
+/* Estilos para la caja de texto del código promocional */
+.promotional-code {
+  margin-top: 20px; /* Espacio superior */
+  display: flex; /* Usar flexbox para alinear los elementos horizontalmente */
+  align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.promotional-code input[type="text"] {
+  width: 200px; /* Ancho del campo de texto */
+  padding: 8px; /* Espaciado interno */
+  margin-right: 10px; /* Espacio a la derecha */
+  border: 1px solid #762d7e; /* Borde del campo de texto */
+  border-radius: 5px; /* Borde redondeado */
+}
+
+.promotional-code button {
+  background-color: #762d7e; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 8px 16px; /* Espaciado interno */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor apuntador */
+  transition: background-color 0.3s; /* Transición de color de fondo */
+}
+
+.promotional-code button:hover {
+  background-color: #280d36; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilo para el botón de pagar */
+.btn-pagar {
+  background-color: #762d7e; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cursor apuntador */
+  transition: background-color 0.3s; /* Transición de color de fondo */
+  margin-top: 10px;
+}
+
+/* Efecto hover */
+.btn-pagar:hover {
+  background-color: #280d36; /* Color de fondo al pasar el ratón */
+}
