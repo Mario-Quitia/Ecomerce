@@ -1,3 +1,12 @@
+
+// Menu hamburguesa
+
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+
+
 // Definición inicial de la lista de productos.
 const product = [
   // Productos regulares

@@ -39,9 +39,9 @@ nav {
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1rem; /* Agrega espacio alrededor del texto de los enlaces para que no estén pegados al borde */
   font-size: 1rem;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Hace que el cambio de color del texto sea suave y gradual */
 }
 
 .nav-links a:hover {
@@ -76,6 +76,8 @@ nav {
   display: block;
 }
 
+
+
 #count {
   background-color: #762d7e;
   color: #fff;
@@ -92,6 +94,127 @@ nav {
   justify-content: center;
   line-height: 1;
 }
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Oculta el menú en dispositivos móviles */
+    flex-direction: column; /* Muestra los enlaces en una columna */
+    background-color: #1c0a29; /* Color de fondo para el menú */
+    position: absolute;
+    top: 70px; /* Ajusta la posición vertical */
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 10;
+  }
+  .nav-links a {
+    padding: 1rem 0; /* Ajusta el espaciado entre enlaces */
+    text-align: center; /* Centra el texto */
+  }
+  .nav-links.active {
+    display: flex; /* Muestra el menú cuando se activa */
+  }
+}
+
+
+.tarjetas-inicio{
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan según el espacio disponible */
+  justify-content: space-between;
+  padding: 20px 100px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Tamaño fijo para desktop */
+  height: 400px;
+  margin: 10px;
+  border: 2px solid #762d7e;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s; /* Suaviza la transición */
+  position: relative; /* Necesario para la animación */
+}
+
+.titulo{
+  font-size: 30px;
+
+  padding-bottom: 60px;
+}
+
+.contenido {
+  padding: 10px;
+}
+
+.contenido h2 {
+  margin-top: 0;
+}
+
+.contenido p {
+  margin: 0;
+}
+
+/* Animación */
+
+.tarjeta {
+  position: relative;
+  transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+}
+
+.tarjeta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+
+.tarjeta:hover::before {
+  opacity: 1;
+}
+
+.tarjeta:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@media (max-width: 768px) {
+  .tarjetas-inicio {
+    padding: 20px; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  .tarjeta {
+    width: 45%; /* Ajusta las tarjetas para que se muestren en 2 columnas */
+    margin-top: 20px; /* Reduce el margen superior */
+  }
+}
+
+/* Pantallas de teléfonos móviles */
+@media (max-width: 480px) {
+  .tarjetas-inicio {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra las tarjetas */
+  }
+
+  .tarjeta {
+    width: 80%; /* Aumenta el ancho de las tarjetas para mejor visibilidad */
+    margin-top: 20px;
+  }
+
+  .titulo {
+    font-size: 24px; /* Reduce el tamaño del texto para pantallas pequeñas */
+  }
+}
+
 
 .container {
   display: flex; /* Usa flexbox para un mejor control del layout */
@@ -118,6 +241,15 @@ nav {
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Sombra más marcada para efecto de profundidad */
 }
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Cambia el ancho al 100% en pantallas más pequeñas */
+    margin-left: 0; /* Elimina el margen izquierdo en pantallas más pequeñas */
+  }
+}
+
 
 .foot {
   display: flex;
@@ -239,4 +371,105 @@ button:hover {
 /* Efecto hover */
 .btn-pagar:hover {
   background-color: #280d36; /* Color de fondo al pasar el ratón */
+}
+
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .foot {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna en pantallas pequeñas */
+    align-items: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .box {
+    width: 100%; /* Ajusta el ancho al 100% en pantallas pequeñas */
+    margin-bottom: 20px; /* Añade espacio inferior entre las cajas */
+  }
+
+  .promotional-code {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .promotional-code input[type="text"] {
+    width: 100%; /* Ancho del campo de texto al 100% */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 10px; /* Añade espacio inferior */
+  }
+
+  .bottom {
+    height: auto; /* Altura automática */
+  }
+
+  .btn-pagar {
+    width: 100%; /* Ancho al 100% */
+  }
+}
+
+
+
+
+.footer {
+  background-color: #2c2c2c; /* Color de fondo oscuro para el footer */
+  color: #fff; /* Texto en blanco para contraste */
+  padding: 20px 100px; /* Espaciado interno */
+  display: flex;
+  justify-content: space-between; /* Espacia los elementos igualmente */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.footer div {
+  margin: 10px; /* Margen alrededor de cada sección para espaciado */
+}
+
+.footer__contact, .footer__redes-sociales, .footer__terminos, .footer__whatsapp {
+  flex: 1; /* Hace que cada sección tome el mismo espacio */
+  min-width: 150px; /* Establece un ancho mínimo para cada sección */
+}
+
+.footer h3 {
+  margin-top: 0;
+}
+
+.footer a {
+  color: #fff; /* Mantiene los enlaces en blanco para contrastar con el fondo */
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.footer ul {
+  list-style-type: none; /* Elimina los marcadores de lista */
+  padding: 0; /* Elimina el padding predeterminado */
+}
+
+.footer ul li a:hover {
+  text-decoration: underline; /* Añade un subrayado al pasar el ratón sobre los enlaces para mejorar la accesibilidad */
+}
+
+.footer__whatsapp i {
+  font-size: 24px; /* Aumenta el tamaño del ícono de WhatsApp */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px; /* Reduce el padding en pantallas más pequeñas */
+  }
+  
+  .footer__contact, .footer__redes-sociales, .footer__terminos, .footer__whatsapp {
+    flex-basis: 50%; /* Hace que las secciones ocupen el 50% del ancho del footer */
+    text-align: center; /* Centra el texto para una mejor apariencia en dispositivos móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column; /* Cambia la disposición a columna en pantallas muy pequeñas */
+  }
+  
+  .footer__contact, .footer__redes-sociales, .footer__terminos, .footer__whatsapp {
+    flex-basis: 100%; /* Hace que cada sección ocupe el ancho completo */
+    margin: 10px 0; /* Ajusta los márgenes para un mejor espaciado vertical */
+  }
 }
