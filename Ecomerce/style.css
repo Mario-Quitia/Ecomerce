@@ -5,30 +5,30 @@
 }
 
 body {
-  font-family: 'Gothic A1', sans-serif; /* O una tipografía de tu elección */
-  background-color: #000000; /* Un tono de púrpura oscuro de la paleta como fondo general */
-  color: #c992e0; /* Un tono de púrpura claro de la paleta para el texto general */
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #000000;
+  color: #c992e0;
 }
 
 header {
-  background-color: #1c0a29; /* Un tono ligeramente más oscuro para el header */
-  padding: 1rem 0; /* Espaciado superior e inferior para el header */
+  background-color: #1c0a29;
+  padding: 1rem 0;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%; /* Espaciado lateral para el nav */
+  padding: 0 10%;
 }
 
 .logo {
-  color: #762d7e; /* Un tono de púrpura medio para 'Morgana' */
-  font-size: 2rem; /* Tamaño del logotipo */
+  color: #762d7e;
+  font-size: 2rem;
 }
 
 .logo span {
-  color: #fff; /* Color blanco para 'Store' */
+  color: #fff;
 }
 
 .nav-links {
@@ -39,19 +39,21 @@ nav {
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  padding: 0 1rem; /* Agrega espacio alrededor del texto de los enlaces para que no estén pegados al borde */
+  padding: 0 1rem;
   font-size: 1rem;
-  transition: color 0.3s; /* Hace que el cambio de color del texto sea suave y gradual */
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #762d7e; /* Color de resaltado para los enlaces al pasar el ratón */
+  color: #762d7e;
 }
 
 .right-nav {
   display: flex;
   align-items: center;
+  position: relative;
 }
+
 
 .icon-link {
   color: #fff;
@@ -59,24 +61,61 @@ nav {
   padding: 0 0.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   transition: color 0.3s;
 }
 
 .icon-link:hover {
   color: #762d7e;
 }
+.search-btn {
+  background-color: transparent;
+}
 
-#icon-cart {
-  display: flex;
-  position: relative;
+.search-input {
+  outline: none;
+  box-sizing: border-box;
+  height: 60px;
+  width: 0px;
+  padding: 0 20px;
+  color: #000;
+  border-radius: 50px;
+  font-size: 20px;
+  border: 1px solid #762d7e;
+  transition: all .7s ease;
+  background-color: transparent;
+  margin-right: 10px;
+}
+
+.search-btn {
+  border: none;
+  border-radius: 0 50px 50px 0;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.search-btn i {
+  font-size: 25px;
+  color: white;
+  line-height: 60px;
+}
+
+.search-btn:hover {
+  background-color: #280d36;
+}
+
+.right-nav:hover .search-input {
+  width: 250px;
+}
+
+.right-nav:hover .search-btn i {
+  transform: rotate(-360deg);
 }
 
 #icon-cart i {
   font-size: 1.5rem;
   display: block;
 }
-
-
 
 #count {
   background-color: #762d7e;
@@ -94,6 +133,8 @@ nav {
   justify-content: center;
   line-height: 1;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .nav-links {

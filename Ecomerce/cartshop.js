@@ -7,6 +7,9 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 });
 
 
+
+
+
 // Definición inicial de la lista de productos.
 const product = [
   // Productos regulares

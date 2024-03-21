@@ -132,3 +132,21 @@ select:focus {
   outline: none;
   border-color: #ffffff;
 }
+
+/* Media queries para dispositivos de pantalla más pequeña */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%; /* Hacer el contenedor un poco más estrecho en pantallas pequeñas */
+  }
+
+  /* Ajustar el ancho de los botones en pantallas pequeñas */
+  .action-buttons button {
+    width: 100%;
+    margin-top: 10px; /* Espacio entre los botones */
+  }
+
+  /* Ajustar el tamaño del logo en pantallas pequeñas */
+  .logo {
+    font-size: 1.5rem;
+  }
+}
