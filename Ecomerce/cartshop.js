@@ -6,6 +6,9 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('active');
 });
 
+document.getElementById('pagar').addEventListener('click', function() {
+  window.location.href = '../Pasareladepago/pasarela.html';
+});
 
 
 
@@ -13,12 +16,12 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 // Definición inicial de la lista de productos.
 const product = [
   // Productos regulares
-  { id: 3, image: '../imagenes/producto4.png', title: 'Ropa gótica', price: 230, category: 'Productos' },
-  { id: 4, image: '../imagenes/producto3.png', title: 'Ropa gótica', price: 230, category: 'Productos' },
-  { id: 5, image: '../imagenes//producto5.png', title: 'Ropa gótica', price: 230, category: 'Productos' },
-  { id: 0, image: '../imagenes//producto1.png', title: 'Ropa gótica', price: 120, category: 'Productos' },
-  { id: 1, image: '../imagenes//producto2.png', title: 'Ropa gótica', price: 60, category: 'Productos' },
-  { id: 2, image: '../imagenes//producto3.png', title: 'Ropa gótica', price: 230, category: 'Productos' },
+  { id: 3, image: '../imagenes/producto4.png', title: 'Ropa gótica', price: 230000, category: 'Productos' },
+  { id: 4, image: '../imagenes/producto3.png', title: 'Ropa gótica', price: 230000, category: 'Productos' },
+  { id: 5, image: '../imagenes//producto5.png', title: 'Ropa gótica', price: 230000, category: 'Productos' },
+  { id: 0, image: '../imagenes//producto1.png', title: 'Ropa gótica', price: 120000, category: 'Productos' },
+  { id: 1, image: '../imagenes//producto2.png', title: 'Ropa gótica', price: 60000, category: 'Productos' },
+  { id: 2, image: '../imagenes//producto3.png', title: 'Ropa gótica', price: 230000, category: 'Productos' },
             
   // Productos en promoción
   { id: 6, image: '../imagenes//promocion1.png', title: 'Ropa gótica en promoción', price: 80, category: 'Promociones' },
@@ -60,7 +63,6 @@ function delElement(index) {
     displaycart();
   }
 }
-
 // Mostrar el carrito de compras.
 function displaycart() {
   document.getElementById("count").textContent = cart.length;
@@ -76,13 +78,14 @@ function displaycart() {
                 <img class='rowimg' src=${item.image}>
             </div>
             <p style='font-size:12px;'>${item.title}</p>
-            <h2 style='font-size: 15px;'>$ ${item.price}.00</h2>
+            <h2 style='font-size: 15px;'>$ ${item.price.toLocaleString('es-ES')}</h2> <!-- Formatear precio -->
             <i class='fa-solid fa-trash' onclick='delElement(${index})'></i>
         </div>
     `).join('');
-    document.getElementById("total").textContent = `$ ${total}.00`;
+    document.getElementById("total").textContent = `$ ${total.toLocaleString('es-ES')}`; // Formatear total
   }
 }
+
 
 // Renderizado de categorías y productos en el HTML.
 window.onload = function() {
@@ -99,7 +102,7 @@ window.onload = function() {
                       </div>
                       <div class='bottom'>
                           <p>${item.title}</p>
-                          <h2>$ ${item.price}.00</h2>
+                          <h2> ${item.price.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}</h2> <!-- Formatear precio -->
                           <button onclick='addtocart(${item.id})'>Agregar al carrito</button>
                       </div>
                   </div>
@@ -107,6 +110,7 @@ window.onload = function() {
             </div>`;
   }).join('');
 };
+
 
 
 
@@ -129,3 +133,14 @@ window.addEventListener("click", function(event) {
     loginModal.style.display = "none";
   }
 });
+
+
+function abrirMenuAccesibilidad() {
+  var menuAccesibilidad = document.querySelector(".menu-accesibilidad");
+  if (menuAccesibilidad.style.display === "none") {
+      menuAccesibilidad.style.display = "block";
+  } else {
+      menuAccesibilidad.style.display = "none";
+  }
+}
+

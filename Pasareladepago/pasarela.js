@@ -10,5 +10,13 @@
     });
 }
 
+document.getElementById('Volver').addEventListener('click', function() {
+    window.location.href = '../Ecomerce/index.html'; // Cambia 'index.html' por la ruta correcta de tu página de inicio
+  });
+
+
 // Llamar a la función para obtener la lista de ciudades de Colombia al cargar la página
 getCities();
+
+
+

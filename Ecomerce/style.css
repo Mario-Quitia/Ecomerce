@@ -514,3 +514,52 @@ button:hover {
     margin: 10px 0; /* Ajusta los márgenes para un mejor espaciado vertical */
   }
 }
+.boton-accesibilidad {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border: none; /* Eliminamos el borde del botón */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agregamos una sombra */
+  display: flex; /* Para centrar verticalmente el ícono */
+  justify-content: center; /* Para centrar verticalmente el ícono */
+  align-items: center; /* Para centrar verticalmente el ícono */
+}
+
+.boton-accesibilidad:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.menu-accesibilidad {
+  position: fixed;
+  bottom: 80px; /* Ajustamos la posición del menú para evitar solapamiento con el botón */
+  right: 20px;
+  z-index: 998; /* Asegurando que esté por debajo del botón de accesibilidad */
+  width: 200px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px;
+  display: none; /* Por defecto, el menú está oculto */
+}
+
+.menu-accesibilidad a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.menu-accesibilidad a:hover {
+  color: #ffffff;
+}
+
+
+

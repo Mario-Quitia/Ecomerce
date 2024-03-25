@@ -15,7 +15,18 @@
 <body>
   <div class="overlay">
     <div class="loader"></div>
-  </div>
+    <div class="accessibility-panel">
+      <button class="boton-accesibilidad" onclick="abrirMenuAccesibilidad()">
+        <i class="fa-solid fa-person-cane"></i> <!-- Ícono de accesibilidad -->
+      </button>
+      <div class="menu-accesibilidad">
+        <h2>Opciones de accesibilidad</h2>
+        <a href="#">Aumentar tamaño del texto</a><br>
+        <a href="#">Activar contraste alto</a><br>
+        <a href="#">Reproducir audio descriptivo</a><br>
+        <a href="#">Más opciones...</a>
+      </div>
+    </div>
   <header>
     <nav>
       <a href="#header" class="logo">Morgana <span>Store</span></a>
@@ -27,6 +38,7 @@
         <a href="#footer">Contacto</a>
       </div>
       <div class="right-nav">
+      
         <input type="text" class="search-input" placeholder="Buscar">
         <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         <a href="#" class="icon-link"><i class="fa-regular fa-user"></i></a>
@@ -76,8 +88,8 @@
           <input type="text" placeholder="Código promocional">
           <button>Aplicar</button>
         </div>
-          <button class="btn-pagar">Pagar</button>
-        </a>
+        <button id="pagar"class="btn-pagar">Pagar</button>
+      </a>
     </div>
   </div>
 
@@ -108,10 +120,14 @@
         <i class="fab fa-whatsapp"></i> <!-- Icono de WhatsApp -->
       </a>
     </div>
+
   </footer>
+ 
 
   <script src="loader.js"></script>
   <script src="cartshop.js"></script>
+  <script src="pasarela.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
 </body>
 </html>
 
