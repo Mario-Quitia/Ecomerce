@@ -24,7 +24,7 @@ nav {
 
 .logo {
   color: #762d7e;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .logo span {
@@ -54,7 +54,6 @@ nav {
   position: relative;
 }
 
-
 .icon-link {
   color: #fff;
   font-size: 1.5rem;
@@ -68,48 +67,35 @@ nav {
 .icon-link:hover {
   color: #762d7e;
 }
-.search-btn {
-  background-color: transparent;
-}
 
 .search-input {
   outline: none;
   box-sizing: border-box;
-  height: 60px;
-  width: 0px;
+  height: 40px; /* Se ha reducido la altura del campo de búsqueda */
+  width: -1px;
   padding: 0 20px;
-  color: #000;
-  border-radius: 50px;
-  font-size: 20px;
-  border: 1px solid #762d7e;
+  color: #fff; /* Color del texto cambiado a blanco */
+  border: 2px solid #762d7e; /* Se ha añadido un borde de color */
+  border-radius: 20px; /* Se ha redondeado el borde */
+  font-size: 16px; /* Tamaño de fuente reducido */
   transition: all .7s ease;
   background-color: transparent;
   margin-right: 10px;
 }
 
 .search-btn {
+  background-color: #762d7e; /* Se ha cambiado el color de fondo del botón */
   border: none;
-  border-radius: 0 50px 50px 0;
   cursor: pointer;
-  transition: .5s;
-}
-
-.search-btn i {
-  font-size: 25px;
-  color: white;
-  line-height: 60px;
+  color: #fff; /* Se ha cambiado el color del texto del botón a blanco */
+  padding: 10px 20px; /* Se ha añadido relleno al botón para que sea más grande */
+  border-radius: 20px; /* Se ha redondeado el borde del botón */
+  font-size: 16px; /* Tamaño de fuente del botón ajustado */
+  transition: background-color 0.3s; /* Efecto de transición al pasar el ratón */
 }
 
 .search-btn:hover {
-  background-color: #280d36;
-}
-
-.right-nav:hover .search-input {
-  width: 250px;
-}
-
-.right-nav:hover .search-btn i {
-  transform: rotate(-360deg);
+  background-color: #5c1e59; /* Color de fondo del botón al pasar el ratón */
 }
 
 #icon-cart i {
@@ -134,28 +120,43 @@ nav {
   line-height: 1;
 }
 
-
+.menu-toggle {
+  display: none; /* Oculta el menú toggle por defecto */
+}
 
 @media screen and (max-width: 768px) {
   .nav-links {
-    display: none; /* Oculta el menú en dispositivos móviles */
-    flex-direction: column; /* Muestra los enlaces en una columna */
-    background-color: #1c0a29; /* Color de fondo para el menú */
+    display: none; /* Oculta el menú en dispositivos móviles por defecto */
+    flex-direction: column;
+    background-color: #1c0a29;
     position: absolute;
-    top: 70px; /* Ajusta la posición vertical */
+    top: 70px;
     left: 0;
     width: 100%;
     padding: 1rem;
     z-index: 10;
   }
+
   .nav-links a {
-    padding: 1rem 0; /* Ajusta el espaciado entre enlaces */
-    text-align: center; /* Centra el texto */
+    padding: 1rem 0;
+    text-align: center;
   }
+
   .nav-links.active {
-    display: flex; /* Muestra el menú cuando se activa */
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block; /* Muestra el menú toggle en dispositivos móviles */
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    cursor: pointer;
   }
 }
+
+
+
 
 
 .tarjetas-inicio{

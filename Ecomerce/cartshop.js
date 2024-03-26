@@ -34,8 +34,6 @@ const product = [
   { id: 11, image: '../imagenes//novedades2.png', title: 'Ropa gótica nueva', price: 50, category: 'Novedades' }
 ];
 
-const loginButton = document.getElementById("loginButton");
-const loginModal = document.getElementById("loginModal");
 
 
 // Extracción única de categorías de productos.
